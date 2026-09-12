@@ -1,101 +1,68 @@
-Privacy Policy – Zeno Network
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy — Zeno Network</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:860px;margin:40px auto;padding:0 20px;line-height:1.65;color:#17212b;background:#fff}
+    h1,h2{line-height:1.25} h2{margin-top:28px}.box{border:1px solid #dbe3ea;border-radius:14px;padding:16px 18px;background:#f7fafc}.muted{color:#5f6b76}a{color:#075fd8}code{background:#eef3f7;padding:2px 6px;border-radius:5px}
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy — Zeno Network</h1>
+  <p class="muted"><strong>Effective date:</strong> 12 September 2026<br><strong>Android package:</strong> <code>com.zenonetwork.zenoapp</code></p>
 
-Effective Date: 02 February 2026
+  <p>Zeno Network (“we”, “our”, or “us”) operates the Zeno Network Android application. This policy explains the information used by the app, why it is used, how account and reward data are protected, and how users can request deletion.</p>
 
-Zeno Network (“we”, “our”, or “us”) operates the Zeno Network mobile application (the “App”).
-This Privacy Policy explains how we collect, use, and protect information when you use our app.
+  <h2>1. Information used by the app</h2>
+  <p>Depending on the features you use, the app may process:</p>
+  <ul>
+    <li><strong>Account information:</strong> Firebase user ID, Google sign-in email address, display name and profile-photo URL.</li>
+    <li><strong>App activity:</strong> reward claims, referral state, task/video engagement state, Premium status, withdrawal-eligibility state and similar account records.</li>
+    <li><strong>Purchase information:</strong> Google Play product and purchase-token information used to verify Zeno Premium. Purchase tokens are verified by the trusted backend and are not exposed publicly.</li>
+    <li><strong>Advertising and analytics information:</strong> device/app information, advertising identifiers where permitted, consent state, ad interactions and analytics events processed by Google/Firebase/AdMob services.</li>
+    <li><strong>App-integrity information:</strong> integrity/security signals used by Firebase App Check / Google Play Integrity to reduce automated abuse and tampering.</li>
+  </ul>
 
-By using the App, you agree to the collection and use of information in accordance with this policy.
+  <h2>2. How information is used</h2>
+  <p>Information is used to authenticate accounts, provide app features, maintain reward/referral state, verify Premium purchases, prevent fraud or duplicate claims, improve reliability, provide analytics, display ads where permitted, and protect backend services.</p>
 
-Information We Collect
+  <h2>3. Zeno reward points and Engagement XP</h2>
+  <div class="box">
+    <p><strong>Zeno reward points:</strong> promotional in-app reward points. <strong>Withdrawal/redemption is disabled in production release v1.14.</strong> A future release may introduce redemption only after a dedicated KYC/payout workflow, eligibility controls, applicable disclosures and compliance requirements are implemented.</p>
+    <p><strong>Engagement XP:</strong> non-withdrawable engagement credit awarded for ads, videos or generic external activities. Engagement XP is not cash, cryptocurrency, a gift card, or transferable value.</p>
+  </div>
 
-We may collect the following types of information:
+  <h2>4. Withdrawals and KYC</h2>
+  <p>Withdrawals and KYC onboarding are disabled in v1.14. This release does not collect identity documents. If a future version enables redemption, the feature will require trusted server-side eligibility controls and any required identity/KYC and payout processes before it is made available.</p>
 
-1. Personal Information
+  <h2>5. Advertising, analytics and third-party services</h2>
+  <p>The app uses Google services including Firebase Authentication, Cloud Firestore, Cloud Functions, Firebase Analytics, Firebase App Check / Play Integrity, Google Play Billing, Google Mobile Ads (AdMob), and Google User Messaging Platform (consent/privacy choices). These providers may process data under their own terms and privacy policies. Google’s privacy policy is available at <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>.</p>
+  <p>Where required, the app requests advertising consent before requesting ads. Users can also open the in-app <strong>Privacy &amp; Policy</strong> screen and select <strong>Manage Ad Privacy Options</strong>.</p>
 
-Email address (used for account authentication and login)
+  <h2>6. Security</h2>
+  <p>Protected balance, referral, Premium and withdrawal fields are not directly writable by the Android client. Sensitive mutations are handled by trusted Firebase Cloud Functions, Firestore Security Rules restrict client access, and App Check / Play Integrity is used for sensitive backend calls. No internet or electronic-storage system can be guaranteed completely secure.</p>
 
-2. Usage Information
+  <h2>7. Account deletion</h2>
+  <p>You can request permanent deletion in either of these ways:</p>
+  <ul>
+    <li><strong>Inside the app:</strong> sign in → open <strong>Profile</strong> → tap <strong>DELETE ACCOUNT &amp; DATA</strong> → confirm deletion.</li>
+    <li><strong>Outside the app:</strong> visit the <a href="account-deletion.html">Zeno Network Account Deletion page</a>, or email <a href="mailto:info@zenonetwork.xyz?subject=Zeno%20Network%20Account%20Deletion%20Request">info@zenonetwork.xyz</a> with the subject <strong>Zeno Network Account Deletion Request</strong>. To protect accounts, we may ask you to verify that you control the account/email being deleted.</li>
+  </ul>
+  <p>The in-app deletion backend removes the Firebase Authentication identity and Zeno app profile data associated with the account, including protected reward/referral state, app-specific user subcollections, Premium-purchase linkage stored by Zeno, and withdrawal-request records. A genuinely pending withdrawal must be resolved before in-app deletion.</p>
+  <p>Independent providers such as Google may retain information they control where required for security, fraud prevention, billing, legal obligations, or their published retention policies. Deleting a Zeno account does not delete the user’s separate Google account.</p>
 
-Tasks completed within the app
+  <h2>8. Data sharing</h2>
+  <p>We do not sell personal information. Data may be processed by service providers used to operate the app (for example Google/Firebase/AdMob/Google Play) as necessary for the features described above, or disclosed when required by applicable law.</p>
 
-Ads watched
+  <h2>9. Children</h2>
+  <p>Zeno Network is not directed to children under 13. We do not knowingly create a service intended to collect personal information from children under 13. If you believe a child has provided personal information, contact us so the matter can be reviewed.</p>
 
-App activity and interaction
+  <h2>10. Changes to this policy</h2>
+  <p>We may update this policy when app features or legal requirements change. The effective date at the top of this page will be updated when material changes are published.</p>
 
-3. Device Information
-
-We may collect non-personal device data such as:
-
-Device model
-
-Operating system version
-
-App version
-
-Advertising ID
-
-This information helps us improve performance and ensure the app works correctly.
-
-How We Use Your Information
-
-We use collected information for the following purposes:
-
-To provide app services and features
-
-To reward users with Zeno Points for completing tasks
-
-To improve app performance and user experience
-
-To detect fraud or misuse of the platform
-
-To display advertisements within the app
-
-Advertising and Third-Party Services
-
-Our app uses Google AdMob to display advertisements.
-
-Google AdMob may collect information such as advertising identifiers and device information to provide personalized ads.
-
-You can learn more about how Google uses data here:
-
-Google Privacy Policy
-https://policies.google.com/privacy
-
-Zeno Points Disclaimer
-
-Zeno Points are virtual reward points used only inside the app.
-
-They:
-
-Are not real money
-
-Are not cryptocurrency
-
-Have no monetary or cash value
-
-Cannot be withdrawn or exchanged for real currency
-
-These points are provided only as part of the app's engagement and reward system.
-
-Data Security
-
-We take reasonable measures to protect your information from unauthorized access, misuse, or disclosure.
-However, no method of internet transmission or electronic storage is completely secure.
-
-Children's Privacy
-
-The app is not intended for children under the age of 13.
-We do not knowingly collect personal information from children.
-
-Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time.
-Any changes will be posted on this page with an updated effective date.
-
-Contact Us
-
-If you have any questions about this Privacy Policy, please contact us:
-
-📧 info@zenonetwork.xyz
-
+  <h2>11. Contact</h2>
+  <p>Privacy, account-deletion and app-data questions: <a href="mailto:info@zenonetwork.xyz">info@zenonetwork.xyz</a>.</p>
+</body>
+</html>
