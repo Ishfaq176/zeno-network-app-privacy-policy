@@ -23,6 +23,7 @@
     <li><strong>Purchase information:</strong> Google Play product and purchase-token information used to verify Zeno Premium. Purchase tokens are verified by the trusted backend and are not exposed publicly.</li>
     <li><strong>Advertising and analytics information:</strong> device/app information, advertising identifiers where permitted, consent state, ad interactions and analytics events processed by Google/Firebase/AdMob services.</li>
     <li><strong>App-integrity information:</strong> integrity/security signals used by Firebase App Check / Google Play Integrity to reduce automated abuse and tampering.</li>
+    <li><strong>Public referral leaderboard:</strong> a sanitized leaderboard may display a member name and referral count. Email addresses and private user documents are not published in that leaderboard.</li>
   </ul>
 
   <h2>2. How information is used</h2>
@@ -30,8 +31,8 @@
 
   <h2>3. Zeno reward points and Engagement XP</h2>
   <div class="box">
-    <p><strong>Zeno reward points:</strong> promotional in-app reward points. <strong>Withdrawal/redemption is disabled in production release v1.14.</strong> A future release may introduce redemption only after a dedicated KYC/payout workflow, eligibility controls, applicable disclosures and compliance requirements are implemented.</p>
-    <p><strong>Engagement XP:</strong> non-withdrawable engagement credit awarded for ads, videos or generic external activities. Engagement XP is not cash, cryptocurrency, a gift card, or transferable value.</p>
+    <p><strong>Legacy Zeno points:</strong> in-app account history retained for existing users. <strong>Withdrawal/redemption is disabled in production release v1.14.</strong> A future release may introduce redemption only after a dedicated KYC/payout workflow, eligibility controls, applicable disclosures and compliance requirements are implemented.</p>
+    <p><strong>Engagement XP:</strong> non-withdrawable engagement credit awarded through daily, referral, task, video and rewarded-ad activities. Engagement XP is not cash, cryptocurrency, a gift card, or transferable value.</p>
   </div>
 
   <h2>4. Withdrawals and KYC</h2>
@@ -42,7 +43,7 @@
   <p>Where required, the app requests advertising consent before requesting ads. Users can also open the in-app <strong>Privacy &amp; Policy</strong> screen and select <strong>Manage Ad Privacy Options</strong>.</p>
 
   <h2>6. Security</h2>
-  <p>Protected balance, referral, Premium and withdrawal fields are not directly writable by the Android client. Sensitive mutations are handled by trusted Firebase Cloud Functions, Firestore Security Rules restrict client access, and App Check / Play Integrity is used for sensitive backend calls. No internet or electronic-storage system can be guaranteed completely secure.</p>
+  <p>Protected reward, referral, Premium and withdrawal-related fields are not directly writable by the Android client. Sensitive mutations are handled by trusted Firebase Cloud Functions, Firestore Security Rules restrict client access, and App Check / Play Integrity is used for sensitive backend calls. No internet or electronic-storage system can be guaranteed completely secure.</p>
 
   <h2>7. Account deletion</h2>
   <p>You can request permanent deletion in either of these ways:</p>
@@ -50,7 +51,7 @@
     <li><strong>Inside the app:</strong> sign in → open <strong>Profile</strong> → tap <strong>DELETE ACCOUNT &amp; DATA</strong> → confirm deletion.</li>
     <li><strong>Outside the app:</strong> visit the <a href="account-deletion.html">Zeno Network Account Deletion page</a>, or email <a href="mailto:info@zenonetwork.xyz?subject=Zeno%20Network%20Account%20Deletion%20Request">info@zenonetwork.xyz</a> with the subject <strong>Zeno Network Account Deletion Request</strong>. To protect accounts, we may ask you to verify that you control the account/email being deleted.</li>
   </ul>
-  <p>The in-app deletion backend removes the Firebase Authentication identity and Zeno app profile data associated with the account, including protected reward/referral state, app-specific user subcollections, Premium-purchase linkage stored by Zeno, and withdrawal-request records. A genuinely pending withdrawal must be resolved before in-app deletion.</p>
+  <p>The in-app deletion backend removes the Firebase Authentication identity and Zeno-owned app data associated with the account, including protected reward/referral state, app-specific user subcollections, Premium-purchase linkage stored by Zeno, leaderboard entry, and withdrawal-request records associated with that account.</p>
   <p>Independent providers such as Google may retain information they control where required for security, fraud prevention, billing, legal obligations, or their published retention policies. Deleting a Zeno account does not delete the user’s separate Google account.</p>
 
   <h2>8. Data sharing</h2>
